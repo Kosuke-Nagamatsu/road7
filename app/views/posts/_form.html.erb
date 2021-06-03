@@ -1,0 +1,27 @@
+<%= form_with(model: @post, local: true) do |form| %>
+<% if @post.errors.any? %>
+<div id="error_explanation">
+  <h2><%= @post.errors.count %>件のエラーがあります。</h2>
+  <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="post_content">
+  <%= form.label :'What\'s up?' %>
+  <%= form.text_field :content %>
+</div>
+<div class="post_submit">
+<%= form.submit %>
+</div>
+<p class="link_to">
+  <%= link_to "つぶやき一覧画面にもどる", posts_path %>
+</p>
+<% end %>
+<footer>
+</footer>
+</div>
+</body>
+</html>
