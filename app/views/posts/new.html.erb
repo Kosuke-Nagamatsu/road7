@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+      </header>
+      <h1>Let's tweet!</h1>
+      <%= form_with(model: Post.new, local: true) do |form| %>
+      <div class="post_content">
+        <%= form.label :'What\'s up?' %>
+        <%= form.text_field :content %>
+      </div>
+      <div class="post_submit">
+      <%= form.submit %>
+      </div>
+      <footer>
+      </footer>
+    </div>
+    <% end %>
+  </body>
+</html>
