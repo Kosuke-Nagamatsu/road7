@@ -1,54 +1,7 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// html {
-//   font-size: 62.5%;
-//   height: 100%;
-// }
-// body {
-//     height: 100%;
-//   }
-//   li {
-//     list-style: none;
-//   }
-//   .container {
-//     width: 980px;
-//     margin: 0 auto;
-//     min-height: 100%;
-//     position: relative;
-//   }
-//   .header {
-//     background-color: #f5b4b3;
-//     height: 50px;
-//     font-size: 1.5rem;
-//   }
-//   .logo_image {
-//     width: 110px;
-//     margin: 0;
-//     float: left;
-//   }
-//   .image_area {
-//     width: 100%;
-//   }
-//   .wrapper {
-//     margin-top: 10px;
-//     padding-bottom: 100px;
-//   }
-//   .footer {
-//     background-color: #4D4D4D;
-//     width: 100%;
-//     height: 100px;
-//     position: absolute;
-//     bottom: 0;
-//     display: table;
-//   }
-//   .footer p {
-//     font-size: 1rem;
-//     color: #fff;
-//     text-align: center;
-//     vertical-align: middle;
-//     display: table-cell;
-//   }
+a {
+  text-decoration: none;
+  color: white;
+}
 html {
   height: 100%;
 }
@@ -75,6 +28,17 @@ form .post_content {
 }
 form .post_submit {
   padding-bottom: 30px;
+}
+table {
+  text-align: center;
+  padding: 20px;
+}
+th {
+  border-bottom: 1px solid white;
+}
+.link_to_new {
+  font-size: 1rem;
+  padding: 20px;
 }
 footer{
   background-color:black;

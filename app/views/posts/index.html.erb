@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+      </header>
+      <h1>つぶやき一覧</h1>
+      <table>
+        <tr>
+          <th>内容</th>
+        </tr>
+        <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.content %></td>
+        </tr>
+        <% end %>
+      </table>
+      <p class="link_to_new">
+        <%= link_to '新しくつぶやきを投稿する', new_post_path %>
+      </p>
+      <footer>
+      </footer>
+    </div>
+  </body>
+</html>
