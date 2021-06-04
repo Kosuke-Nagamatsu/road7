@@ -11,7 +11,7 @@ body {
 }
 header{
   background-color: #4169e1;
-  height: 80px
+  height: 70px
 }
 h1 {
   font-size: 1.8rem;
@@ -46,7 +46,7 @@ td {
 }
 footer{
   background-color: #4169e1;
-  height: 80px
+  height: 70px
 }
 .link {
   text-align: center;
@@ -54,4 +54,11 @@ footer{
 }
 .button {
   padding: 30px;
+}
+.top_menu {
+  list-style: none;
+  text-align: center;
+}
+.top_menu li {
+  padding-bottom: 5px;
 }

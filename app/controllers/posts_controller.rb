@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
   def index
+
+  end
+  def list
     @posts = Post.all
   end
   def new
@@ -12,7 +15,7 @@ class PostsController < ApplicationController
       render :new
     else
       if @post.save
-        redirect_to posts_path, notice: "つぶやきを投稿しました！"
+        redirect_to list_posts_path, notice: "つぶやきを投稿しました！"
       else
         render :new
       end
@@ -22,14 +25,14 @@ class PostsController < ApplicationController
   end
   def update
     if @post.update(post_params)
-      redirect_to posts_path, notice: "内容を編集しました！"
+      redirect_to list_posts_path, notice: "内容を編集しました！"
     else
       render :edit
     end
   end
   def destroy
     @post.destroy
-    redirect_to posts_path, notice:"内容を削除しました！"
+    redirect_to list_posts_path, notice:"内容を削除しました！"
   end
   def confirm
     @post = Post.new(post_params)

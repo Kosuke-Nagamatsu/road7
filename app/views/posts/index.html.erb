@@ -1,19 +1,8 @@
-<h1>つぶやき一覧</h1>
-<p><%= notice %></p>
-<div class="container">
-  <table>
-    <tr>
-      <th>内容</th>
-    </tr>
-    <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.content %></td>
-      <td><%= link_to "内容を編集する", edit_post_path(post.id) %></td>
-      <td><%= link_to '内容を削除する', post_path(post.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
-    </tr>
-    <% end %>
-  </table>
-</div>
-<p class="link">
-  <%= link_to '新しくつぶやきを投稿する', new_post_path %>
-</p>
+<h1>Let's Tweet!</h1>
+<nav>
+  <ul class="top_menu">
+    <li><%= link_to "ホームへ", posts_path %></li>
+    <li><%= link_to "新規投稿する", new_post_path %></li>
+    <li><%= link_to "つぶやき一覧へ", list_posts_path %></li>
+  </ul>
+</nav>
